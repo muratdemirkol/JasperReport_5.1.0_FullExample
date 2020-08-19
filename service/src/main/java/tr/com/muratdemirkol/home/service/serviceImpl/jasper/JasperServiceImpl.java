@@ -2,33 +2,65 @@ package tr.com.muratdemirkol.home.service.serviceImpl.jasper;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import tr.com.muratdemirkol.home.dao.PersonDao;
-import tr.com.muratdemirkol.home.domain.converter.PersonConverter;
-import tr.com.muratdemirkol.home.domain.dto.PersonDto;
-import tr.com.muratdemirkol.home.domain.entity.PersonEntity;
-import tr.com.muratdemirkol.home.service.service.person.PersonService;
-import tr.com.muratdemirkol.home.service.serviceImpl.person.PersonServiceImpl;
+import tr.com.muratdemirkol.home.domain.enums.ReportEnum;
+import tr.com.muratdemirkol.home.service.service.jasper.JasperExportService;
+import tr.com.muratdemirkol.home.service.service.jasper.JasperService;
+
+import java.util.logging.Logger;
 
 /**
  * Created By Murat DEMIRKOL 16.08.2020
+ * Datanın hazılandığı ve exporta hazırlandığı kısım
  **/
 @Service
-public class JasperServiceImpl {
+public class JasperServiceImpl implements JasperService {
 
-    private PersonService personService;
+    Logger LOGGER = Logger.getLogger(JasperServiceImpl.class.getName());
 
     @Autowired
-    private PersonDao personDao;
+    private JasperExportService jasperExportService;
 
-    public JasperServiceImpl(PersonService personService) {
-        this.personService = personService;
+    public byte[] createSingleReport(String enumKodu) {
+        ReportEnum reportEnum = ReportEnum.getByEnum(enumKodu);
+        System.out.println(reportEnum.getReportSourceName());
+        System.out.println(reportEnum.getKod());
+        jasperExportService.createSingleReport("","",null, null);
+        return new byte[0];
     }
 
-    public PersonEntity create(PersonDto dto){
-        PersonConverter converter = new PersonConverter();
-        PersonEntity personEntity = converter.getConverterDtoToEntity(dto);
-        PersonEntity entity = personDao.save(personEntity);
-        return entity;
+    public byte[] createListReport(String enumKodu) {
+        return new byte[0];
     }
+
+    public byte[] createMasterAndDetailReport(String enumKodu) {
+        return new byte[0];
+    }
+
+    public byte[] createMasterDetailAndSubReport(String enumKodu) {
+        return new byte[0];
+    }
+
+    public byte[] createMultipleCombinationReport(String enumKodu) {
+        return new byte[0];
+    }
+
+    public byte[] createCrosstabReport(String enumKodu) {
+        return new byte[0];
+    }
+
+    public byte[] createGraphicReport(String enumKodu) {
+        return new byte[0];
+    }
+
+    public byte[] createMapReport(String enumKodu) {
+        return new byte[0];
+    }
+
+    public byte[] createWidgetReport(String enumKodu) {
+        return new byte[0];
+    }
+
+//    @Autowired
+//    private PersonDao personDao;
 
 }

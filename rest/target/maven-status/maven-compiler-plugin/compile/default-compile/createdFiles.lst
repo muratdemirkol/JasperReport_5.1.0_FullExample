@@ -1,3 +1,4 @@
-tr\com\muratdemirkol\home\rest\test\TestStartApp.class
-tr\com\muratdemirkol\home\rest\test\TestBean.class
-tr\com\muratdemirkol\home\rest\test\TestController.class
+tr\com\muratdemirkol\home\rest\person\PersonController.class
+tr\com\muratdemirkol\home\rest\person\StartMainApp.class
+tr\com\muratdemirkol\home\rest\jasper\JasperController.class
+tr\com\muratdemirkol\home\rest\person\TestBean.class

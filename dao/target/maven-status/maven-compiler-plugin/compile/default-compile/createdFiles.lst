@@ -1,1 +1,2 @@
-tr\com\muratdemirkol\home\dao\TestDAO.class
+tr\com\muratdemirkol\home\dao\BaseDao.class
+tr\com\muratdemirkol\home\dao\PersonDao.class

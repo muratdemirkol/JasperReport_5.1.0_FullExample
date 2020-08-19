@@ -1,2 +1,6 @@
-C:\MyJasperReportProjects\JasperReport_5.1.0_FullExample\domain\src\main\java\tr\com\muratdemirkol\home\domain\test\TestDomain.java
-C:\MyJasperReportProjects\JasperReport_5.1.0_FullExample\domain\src\main\java\tr\com\muratdemirkol\home\domain\jasper\PERSON.java
+C:\MyJasperReportProjects\JasperReport_5.1.0_FullExample\domain\src\main\java\tr\com\muratdemirkol\home\domain\entity\BaseEntity.java
+C:\MyJasperReportProjects\JasperReport_5.1.0_FullExample\domain\src\main\java\tr\com\muratdemirkol\home\domain\converter\PersonConverter.java
+C:\MyJasperReportProjects\JasperReport_5.1.0_FullExample\domain\src\main\java\tr\com\muratdemirkol\home\domain\util\DateUtil.java
+C:\MyJasperReportProjects\JasperReport_5.1.0_FullExample\domain\src\main\java\tr\com\muratdemirkol\home\domain\dto\PersonDto.java
+C:\MyJasperReportProjects\JasperReport_5.1.0_FullExample\domain\src\main\java\tr\com\muratdemirkol\home\domain\enums\ReportEnum.java
+C:\MyJasperReportProjects\JasperReport_5.1.0_FullExample\domain\src\main\java\tr\com\muratdemirkol\home\domain\entity\PersonEntity.java

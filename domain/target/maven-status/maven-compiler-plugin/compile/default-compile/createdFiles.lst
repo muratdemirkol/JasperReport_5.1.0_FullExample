@@ -1,2 +1,6 @@
-tr\com\muratdemirkol\home\domain\test\TestDomain.class
-tr\com\muratdemirkol\home\domain\jasper\PERSON.class
+tr\com\muratdemirkol\home\domain\dto\PersonDto.class
+tr\com\muratdemirkol\home\domain\entity\BaseEntity.class
+tr\com\muratdemirkol\home\domain\entity\PersonEntity.class
+tr\com\muratdemirkol\home\domain\util\DateUtil.class
+tr\com\muratdemirkol\home\domain\enums\ReportEnum.class
+tr\com\muratdemirkol\home\domain\converter\PersonConverter.class

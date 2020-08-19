@@ -1,8 +1,8 @@
 package tr.com.muratdemirkol.home.rest.jasper;
 
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+import tr.com.muratdemirkol.home.service.service.jasper.JasperService;
 
 
 /**
@@ -12,12 +12,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "jasper")
 public class JasperController {
 
-//    @Autowired
-//    private PersonService personService;
+    @Autowired
+    private JasperService jasperService;
 
     @PostMapping("/singlereport")
-    public Boolean singlereport() {
-        return true;
+    public byte[] createSingleReport(@RequestParam("enumKodu") String enumKodu) {
+        return jasperService.createSingleReport(enumKodu);
     }
+
+    @PostMapping("/listreport")
+    public byte[] createListReport(@RequestParam("enumKodu") String enumKodu) {
+        return jasperService.createListReport(enumKodu);
+    }
+
 
 }
