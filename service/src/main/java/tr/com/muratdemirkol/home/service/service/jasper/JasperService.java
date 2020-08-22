@@ -7,8 +7,6 @@ public interface JasperService {
 
     byte[] createSingleReport(String enumKodu);
 
-    byte[] createListReport(String enumKodu);
-
     byte[] createMasterAndDetailReport(String enumKodu);
 
     byte[] createMasterDetailAndSubReport(String enumKodu);

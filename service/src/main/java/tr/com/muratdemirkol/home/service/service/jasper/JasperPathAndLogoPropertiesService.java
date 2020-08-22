@@ -11,6 +11,6 @@ public interface JasperPathAndLogoPropertiesService {
 
     String getJasperExportPath();
 
-    Image getJasperLogoPath();
+    Image getJasperLogoPath(String imageName);
 
 }

@@ -16,6 +16,7 @@ import java.io.*;
 public class JasperPathAndLogoPropertiesServiceImpl implements JasperPathAndLogoPropertiesService {
 
     private static Logger LOGGER = LoggerFactory.logger(JasperPathAndLogoPropertiesServiceImpl.class);
+
     public String getJasperSourcePath() {
         String directory = new File("/MyJasperReportProjects/reports/sourceTemplates/").getAbsolutePath() + "/";
         File file = new File(directory);
@@ -34,7 +35,7 @@ public class JasperPathAndLogoPropertiesServiceImpl implements JasperPathAndLogo
         return directory;
     }
 
-    public Image getJasperLogoPath() {
+    public Image getJasperLogoPath(String imageName) {
 
         String directory = new File("/MyJasperReportProjects/reports/logo/").getAbsolutePath() + "/";
         File file = new File(directory);
@@ -45,7 +46,7 @@ public class JasperPathAndLogoPropertiesServiceImpl implements JasperPathAndLogo
         InputStream is;
         Image image = null;
         try {
-            is = new BufferedInputStream(new FileInputStream(directory + "logo.png"));
+            is = new BufferedInputStream(new FileInputStream(directory + imageName));
             image = ImageIO.read(is);
         } catch (IOException e) {
             // TODO Auto-generated catch block

@@ -21,8 +21,13 @@ public class JasperController {
     }
 
     @PostMapping("/listreport")
-    public byte[] createListReport(@RequestParam("enumKodu") String enumKodu) {
-        return jasperService.createListReport(enumKodu);
+    public byte[] createMasterAndDetailReport(@RequestParam("enumKodu") String enumKodu) {
+        return jasperService.createMasterAndDetailReport(enumKodu);
+    }
+
+    @PostMapping("/subreport")
+    public byte[] createMasterDetailAndSubReport(@RequestParam("enumKodu") String enumKodu) {
+        return jasperService.createMasterDetailAndSubReport(enumKodu);
     }
 
 

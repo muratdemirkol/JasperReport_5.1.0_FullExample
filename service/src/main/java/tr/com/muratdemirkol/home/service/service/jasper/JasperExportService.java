@@ -1,5 +1,6 @@
 package tr.com.muratdemirkol.home.service.service.jasper;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -8,6 +9,10 @@ import java.util.Map;
  **/
 public interface JasperExportService {
 
-    byte[] createSingleReport(String reportName, String reportType, Map<String, Object> paramaters, List data);
+    byte[] exportSingleReport(String enumKodu, Map<String, Object> paramaters);
+
+    byte[] exportMasterAndDetailReport(String enumKodu, Map<String, Object> paramaters, List data);
+
+    byte[] exportMasterDetailAndSubReport(String enumKodu, Map<String, Object> paramaters, List data, ArrayList<List> subData);
 
 }

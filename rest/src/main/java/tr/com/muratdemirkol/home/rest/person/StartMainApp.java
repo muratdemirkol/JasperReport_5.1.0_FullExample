@@ -22,12 +22,12 @@ public class StartMainApp {
         SpringApplication.run(StartMainApp.class, args);
     }
 
-//    @Bean
-//    public TestBean testBean() {
-//        TestBean test = new TestBean();
-//        test.setTest("Murat");
-//        return test;
-//    }
+    @Bean
+    public TestBean testBean() {
+        TestBean test = new TestBean();
+        test.setTest("Murat");
+        return test;
+    }
 
     @Bean
     public LocalSessionFactoryBean sessionFactory() {
